@@ -9,5 +9,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 h1 {
     font-size: 180%;
     font-family: monospace;
-    font-weight: bold
+    font-weight: bold;
+}
+
+H2 {
+    font-family: monospace;
+    font-size: 100%;
+    font-weight: bold;
 }
