@@ -25,3 +25,11 @@ img {
 b {
     color:#db1b3aff;
 }
+
+body {
+    font-family: "Lato", times new roman
+}
+
+.mySlides {
+    display: none;
+}
