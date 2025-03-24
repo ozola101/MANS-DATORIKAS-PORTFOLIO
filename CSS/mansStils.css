@@ -20,7 +20,11 @@ h2 {
 
 img {
     border: 1px solid #000000;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
+
 
 b {
     color:#db1b3aff;
@@ -33,3 +37,4 @@ body {
 .mySlides {
     display: none;
 }
+
