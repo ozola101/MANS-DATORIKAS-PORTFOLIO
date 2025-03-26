@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>baiti.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            
+        <form>
+     <p>Aprēķināt cik daudz informācijas var lejupielādēt</p>
+     <p>  <input type="text" id="sek" name="sek" onfocus="reset()"> sekundēs, ja interneta ātrums ir 25Mbps.</p><br>
+     <p>Atbilde</p>
+    
+         <input type="text" id="atb">
+        <input type="radio" name="KB" id="KiB" value="KiB" onclick="atb.value=25*976.563*sek.value">
+        <label for="KiB">KiB</label>
+        <input type="radio" name="KB" id="KB" value="KB"   onclick="atb.value=25*1000*sek.value">
+        <label for="KB">KB</label>
+
+            </form>
+    </body>
+</html>
+ 
