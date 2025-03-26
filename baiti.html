@@ -10,49 +10,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <script>
-       function atbilde() {
-    const inputField = document.getElementById("sek");
-    const resultField = document.getElementById("atb");
-    const radioButtons = document.querySelectorAll("input[name='KiB']");
- 
- 
-    radioButtons.forEach(button => {
-        button.addEventListener("click", function atbilde() {
-            const seconds = parseFloat(inputField.value);
-            if (!isNaN(seconds)) {
-                const speedMbps = 25; // Internet speed in Mbps
-                const speedBps = speedMbps * 125000; // Convert Mbps to Bytes per second
-                let dataDownloaded = seconds * speedBps; // Total bytes downloaded
-                if (this.value === "KiB") {
-                    dataDownloaded /= 1024; // Convert to KiB
-                } else if (this.value === "KB") {
-                    dataDownloaded /= 1000; // Convert to KB
-                }
-                resultField.value = dataDownloaded.toFixed(2) + " " + this.value;
-            } else {
-                resultField.value = "Invalid input";
-                inputField.addEventListener("focus", function atbilde() {
-        form.reset(); // Reset the form when input field is focused
-    });
-            }
-        });
-    });
-});
-        
-        
-        
-        </script>
-        
+            
         <form>
      <p>Aprēķināt cik daudz informācijas var lejupielādēt</p>
-     <p>  <input type="text" id="sek" name="sek"> sekundēs, ja interneta ātrums ir 25Mbps.</p><br>
+     <p>  <input type="text" id="sek" name="sek" onfocus="reset()"> sekundēs, ja interneta ātrums ir 25Mbps.</p><br>
      <p>Atbilde</p>
-     <input type="text" name="atb">
-     <input type="radio" id="KiB" name="KiB" onclick="atbilde()">
-    <label for="KiB">KiB</label>
-  <input type="radio" id="KB"  name="KB" onclick="atbilde()">
-  <label for="KB">KB</label>
-        </form>
+    
+         <input type="text" id="atb">
+        <input type="radio" name="KB" id="KiB" value="KiB" onclick="atb.value=25*976.563*sek.value">
+        <label for="KiB">KiB</label>
+        <input type="radio" name="KB" id="KB" value="KB"   onclick="atb.value=25*1000*sek.value">
+        <label for="KB">KB</label>
+
+            </form>
     </body>
 </html>
+ 
