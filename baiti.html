@@ -17,9 +17,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
      <p>Atbilde</p>
     
          <input type="text" id="atb">
-        <input type="radio" name="KB" id="KiB" value="KiB" onclick="atb.value=25*976.563*sek.value">
+         <!-- Mbps pārveido uz B un tad uz KiB-->
+         <input type="radio" name="KB" id="KiB" value="KiB" onclick="atb.value=25000000/8/1000*sek.value"> 
         <label for="KiB">KiB</label>
-        <input type="radio" name="KB" id="KB" value="KB"   onclick="atb.value=25*1000*sek.value">
+        <!-- Mbps pārveido uz B un tad uz KB-->
+        <input type="radio" name="KB" id="KB" value="KB"   onclick="atb.value=25000000/8/1024*sek.value">
         <label for="KB">KB</label>
 
             </form>
